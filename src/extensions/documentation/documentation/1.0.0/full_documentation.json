@@ -2040,19 +2040,7 @@
   "tags": [
     {
       "name": "Users",
-      "description": "",
-      "externalDocs": {
-        "description": "Find out more",
-        "url": "https://docs.strapi.io/developer-docs/latest/plugins/users-permissions.html"
-      }
-    },
-    {
-      "name": "Users",
-      "description": "Users, roles, and permissions endpoints",
-      "externalDocs": {
-        "description": "Find out more",
-        "url": "https://docs.strapi.io/developer-docs/latest/plugins/users-permissions.html"
-      }
+      "description": ""
     }
   ]
 }
