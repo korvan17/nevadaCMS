@@ -361,6 +361,76 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiCompanyContactCompanyContact extends Schema.SingleType {
+  collectionName: 'company_contacts';
+  info: {
+    singularName: 'company-contact';
+    pluralName: 'company-contacts';
+    displayName: 'companyContact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    email: Attribute.Email;
+    phone: Attribute.String & Attribute.Required;
+    country: Attribute.String & Attribute.Required;
+    city: Attribute.String & Attribute.Required;
+    address: Attribute.String;
+    facebook: Attribute.String;
+    instagram: Attribute.String;
+    telegram: Attribute.String;
+    whatsapp: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::company-contact.company-contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::company-contact.company-contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiQuestionQuestion extends Schema.CollectionType {
+  collectionName: 'questions';
+  info: {
+    singularName: 'question';
+    pluralName: 'questions';
+    displayName: 'Question';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    question: Attribute.String & Attribute.Required;
+    answer: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::question.question',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::question.question',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -586,7 +656,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     username: Attribute.String &
@@ -615,6 +684,19 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    phone: Attribute.String & Attribute.Required;
+    companyName: Attribute.String;
+    companyWebsite: Attribute.String;
+    amazonSupportSFP: Attribute.Boolean & Attribute.DefaultTo<false>;
+    amazonSupportFBA: Attribute.Boolean & Attribute.DefaultTo<false>;
+    freightForwarding: Attribute.Boolean & Attribute.DefaultTo<false>;
+    crowdFundingFulfilment: Attribute.Boolean & Attribute.DefaultTo<false>;
+    ecommerceFulfilment: Attribute.Boolean & Attribute.DefaultTo<false>;
+    omniChannelFulfilment: Attribute.Boolean & Attribute.DefaultTo<false>;
+    subscriptionBoxFulfilment: Attribute.Boolean & Attribute.DefaultTo<false>;
+    contactCentre: Attribute.Boolean & Attribute.DefaultTo<false>;
+    valueAdd: Attribute.Boolean & Attribute.DefaultTo<false>;
+    fullName: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -676,76 +758,6 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
-export interface ApiCompanyContactCompanyContact extends Schema.SingleType {
-  collectionName: 'company_contacts';
-  info: {
-    singularName: 'company-contact';
-    pluralName: 'company-contacts';
-    displayName: 'companyContact';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    email: Attribute.Email;
-    phone: Attribute.String & Attribute.Required;
-    country: Attribute.String & Attribute.Required;
-    city: Attribute.String & Attribute.Required;
-    address: Attribute.String;
-    facebook: Attribute.String;
-    instagram: Attribute.String;
-    telegram: Attribute.String;
-    whatsapp: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::company-contact.company-contact',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::company-contact.company-contact',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiQuestionQuestion extends Schema.CollectionType {
-  collectionName: 'questions';
-  info: {
-    singularName: 'question';
-    pluralName: 'questions';
-    displayName: 'Question';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    question: Attribute.String & Attribute.Required;
-    answer: Attribute.Text & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::question.question',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::question.question',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Shared {
     export interface ContentTypes {
@@ -756,14 +768,14 @@ declare module '@strapi/strapi' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::company-contact.company-contact': ApiCompanyContactCompanyContact;
+      'api::question.question': ApiQuestionQuestion;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
-      'api::company-contact.company-contact': ApiCompanyContactCompanyContact;
-      'api::question.question': ApiQuestionQuestion;
     }
   }
 }
