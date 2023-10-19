@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "price_containers",
+  "info": {
+    "singularName": "price-container",
+    "pluralName": "price-containers",
+    "displayName": "PriceContainer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "inspection": {
+      "type": "integer",
+      "required": false
+    },
+    "receiving": {
+      "type": "integer",
+      "required": false
+    },
+    "forwarding": {
+      "type": "integer"
+    },
+    "storage": {
+      "type": "integer"
+    },
+    "utilization": {
+      "type": "integer"
+    },
+    "removals": {
+      "type": "integer"
+    },
+    "pictures": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

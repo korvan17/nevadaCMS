@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "price_products",
+  "info": {
+    "singularName": "price-product",
+    "pluralName": "price-products",
+    "displayName": "PriceProduct",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "deposit": {
+      "type": "decimal",
+      "required": true
+    },
+    "single": {
+      "type": "decimal",
+      "required": true
+    },
+    "set": {
+      "type": "decimal",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "minUnits": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
