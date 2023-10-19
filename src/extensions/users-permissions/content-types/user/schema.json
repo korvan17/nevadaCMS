@@ -55,7 +55,7 @@
     },
     "blocked": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "configurable": false
     },
     "role": {
