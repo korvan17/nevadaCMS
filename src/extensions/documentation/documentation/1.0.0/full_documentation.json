@@ -14,11 +14,14 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-10-19T09:58:00.907Z"
+    "x-generation-date": "2023-10-23T10:15:46.718Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
-    "plugins": ["upload", "users-permissions"]
+    "plugins": [
+      "upload",
+      "users-permissions"
+    ]
   },
   "servers": [
     {
@@ -46,7 +49,9 @@
     "schemas": {
       "Error": {
         "type": "object",
-        "required": ["error"],
+        "required": [
+          "error"
+        ],
         "properties": {
           "data": {
             "nullable": true,
@@ -83,10 +88,16 @@
       },
       "CompanyContactRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["phone", "country", "city"],
+            "required": [
+              "phone",
+              "country",
+              "city"
+            ],
             "type": "object",
             "properties": {
               "email": {
@@ -169,7 +180,11 @@
       },
       "CompanyContact": {
         "type": "object",
-        "required": ["phone", "country", "city"],
+        "required": [
+          "phone",
+          "country",
+          "city"
+        ],
         "properties": {
           "email": {
             "type": "string",
@@ -522,10 +537,14 @@
       },
       "PriceContainerRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["title"],
+            "required": [
+              "title"
+            ],
             "type": "object",
             "properties": {
               "inspection": {
@@ -604,7 +623,9 @@
       },
       "PriceContainer": {
         "type": "object",
-        "required": ["title"],
+        "required": [
+          "title"
+        ],
         "properties": {
           "inspection": {
             "type": "integer"
@@ -953,10 +974,15 @@
       },
       "PricePackingRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["title", "price"],
+            "required": [
+              "title",
+              "price"
+            ],
             "type": "object",
             "properties": {
               "title": {
@@ -1018,7 +1044,10 @@
       },
       "PricePacking": {
         "type": "object",
-        "required": ["title", "price"],
+        "required": [
+          "title",
+          "price"
+        ],
         "properties": {
           "title": {
             "type": "string"
@@ -1350,10 +1379,18 @@
       },
       "PriceProductRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["deposit", "single", "set", "title", "minUnits"],
+            "required": [
+              "deposit",
+              "single",
+              "set",
+              "title",
+              "minUnits"
+            ],
             "type": "object",
             "properties": {
               "deposit": {
@@ -1426,7 +1463,13 @@
       },
       "PriceProduct": {
         "type": "object",
-        "required": ["deposit", "single", "set", "title", "minUnits"],
+        "required": [
+          "deposit",
+          "single",
+          "set",
+          "title",
+          "minUnits"
+        ],
         "properties": {
           "deposit": {
             "type": "number",
@@ -1769,10 +1812,15 @@
       },
       "QuestionRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["question", "answer"],
+            "required": [
+              "question",
+              "answer"
+            ],
             "type": "object",
             "properties": {
               "question": {
@@ -1833,7 +1881,10 @@
       },
       "Question": {
         "type": "object",
-        "required": ["question", "answer"],
+        "required": [
+          "question",
+          "answer"
+        ],
         "properties": {
           "question": {
             "type": "string"
@@ -2272,7 +2323,7 @@
           },
           "blocked": {
             "type": "boolean",
-            "example": true
+            "example": false
           },
           "createdAt": {
             "type": "string",
@@ -2434,7 +2485,9 @@
             }
           }
         },
-        "tags": ["Company-contact"],
+        "tags": [
+          "Company-contact"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -2603,7 +2656,9 @@
             }
           }
         },
-        "tags": ["Company-contact"],
+        "tags": [
+          "Company-contact"
+        ],
         "parameters": [],
         "operationId": "put/company-contact",
         "requestBody": {
@@ -2681,7 +2736,9 @@
             }
           }
         },
-        "tags": ["Company-contact"],
+        "tags": [
+          "Company-contact"
+        ],
         "parameters": [],
         "operationId": "delete/company-contact"
       }
@@ -2750,7 +2807,9 @@
             }
           }
         },
-        "tags": ["Price-container"],
+        "tags": [
+          "Price-container"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -2919,7 +2978,9 @@
             }
           }
         },
-        "tags": ["Price-container"],
+        "tags": [
+          "Price-container"
+        ],
         "parameters": [],
         "operationId": "post/price-containers",
         "requestBody": {
@@ -2998,7 +3059,9 @@
             }
           }
         },
-        "tags": ["Price-container"],
+        "tags": [
+          "Price-container"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3076,7 +3139,9 @@
             }
           }
         },
-        "tags": ["Price-container"],
+        "tags": [
+          "Price-container"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3165,7 +3230,9 @@
             }
           }
         },
-        "tags": ["Price-container"],
+        "tags": [
+          "Price-container"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3245,7 +3312,9 @@
             }
           }
         },
-        "tags": ["Price-packing"],
+        "tags": [
+          "Price-packing"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -3414,7 +3483,9 @@
             }
           }
         },
-        "tags": ["Price-packing"],
+        "tags": [
+          "Price-packing"
+        ],
         "parameters": [],
         "operationId": "post/price-packings",
         "requestBody": {
@@ -3493,7 +3564,9 @@
             }
           }
         },
-        "tags": ["Price-packing"],
+        "tags": [
+          "Price-packing"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3571,7 +3644,9 @@
             }
           }
         },
-        "tags": ["Price-packing"],
+        "tags": [
+          "Price-packing"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3660,7 +3735,9 @@
             }
           }
         },
-        "tags": ["Price-packing"],
+        "tags": [
+          "Price-packing"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3740,7 +3817,9 @@
             }
           }
         },
-        "tags": ["Price-product"],
+        "tags": [
+          "Price-product"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -3909,7 +3988,9 @@
             }
           }
         },
-        "tags": ["Price-product"],
+        "tags": [
+          "Price-product"
+        ],
         "parameters": [],
         "operationId": "post/price-products",
         "requestBody": {
@@ -3988,7 +4069,9 @@
             }
           }
         },
-        "tags": ["Price-product"],
+        "tags": [
+          "Price-product"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4066,7 +4149,9 @@
             }
           }
         },
-        "tags": ["Price-product"],
+        "tags": [
+          "Price-product"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4155,7 +4240,9 @@
             }
           }
         },
-        "tags": ["Price-product"],
+        "tags": [
+          "Price-product"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4235,7 +4322,9 @@
             }
           }
         },
-        "tags": ["Question"],
+        "tags": [
+          "Question"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -4404,7 +4493,9 @@
             }
           }
         },
-        "tags": ["Question"],
+        "tags": [
+          "Question"
+        ],
         "parameters": [],
         "operationId": "post/questions",
         "requestBody": {
@@ -4483,7 +4574,9 @@
             }
           }
         },
-        "tags": ["Question"],
+        "tags": [
+          "Question"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4561,7 +4654,9 @@
             }
           }
         },
-        "tags": ["Question"],
+        "tags": [
+          "Question"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4650,7 +4745,9 @@
             }
           }
         },
-        "tags": ["Question"],
+        "tags": [
+          "Question"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4685,14 +4782,18 @@
           }
         },
         "summary": "",
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "requestBody": {
           "description": "Upload files",
           "required": true,
           "content": {
             "multipart/form-data": {
               "schema": {
-                "required": ["files"],
+                "required": [
+                  "files"
+                ],
                 "type": "object",
                 "properties": {
                   "path": {
@@ -4755,7 +4856,9 @@
           }
         },
         "summary": "",
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "requestBody": {
           "description": "Upload files",
           "required": true,
@@ -4791,7 +4894,9 @@
     },
     "/upload/files": {
       "get": {
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "responses": {
           "200": {
             "description": "Get a list of files",
@@ -4823,7 +4928,9 @@
             }
           }
         ],
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "responses": {
           "200": {
             "description": "Get a specific file",
@@ -4850,7 +4957,9 @@
             }
           }
         ],
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "responses": {
           "200": {
             "description": "Delete a file",
@@ -4879,7 +4988,9 @@
             }
           }
         ],
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Login with a provider",
         "description": "Redirects to provider login before being redirect to /auth/{provider}/callback",
         "responses": {
@@ -4901,7 +5012,9 @@
     },
     "/auth/local": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Local login",
         "description": "Returns a jwt token and user info",
         "requestBody": {
@@ -4952,7 +5065,9 @@
     },
     "/auth/local/register": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Register a user",
         "description": "Returns a jwt token and user info",
         "requestBody": {
@@ -5007,7 +5122,9 @@
     },
     "/auth/{provider}/callback": {
       "get": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Default Callback from provider auth",
         "parameters": [
           {
@@ -5046,7 +5163,9 @@
     },
     "/auth/forgot-password": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Send rest password email",
         "requestBody": {
           "required": true,
@@ -5076,7 +5195,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -5098,7 +5219,9 @@
     },
     "/auth/reset-password": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Rest user password",
         "requestBody": {
           "required": true,
@@ -5152,7 +5275,9 @@
     },
     "/auth/change-password": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Update user's own password",
         "requestBody": {
           "required": true,
@@ -5206,7 +5331,9 @@
     },
     "/auth/email-confirmation": {
       "get": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Confirm user email",
         "parameters": [
           {
@@ -5237,7 +5364,9 @@
     },
     "/auth/send-email-confirmation": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Send confirmation email",
         "requestBody": {
           "required": true,
@@ -5267,7 +5396,9 @@
                     },
                     "sent": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -5289,7 +5420,9 @@
     },
     "/users-permissions/permissions": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get default generated permissions",
         "responses": {
           "200": {
@@ -5358,7 +5491,9 @@
     },
     "/users-permissions/roles": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "List roles",
         "responses": {
           "200": {
@@ -5417,7 +5552,9 @@
         }
       },
       "post": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Create a role",
         "requestBody": {
           "$ref": "#/components/requestBodies/Users-Permissions-RoleRequest"
@@ -5432,7 +5569,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -5454,7 +5593,9 @@
     },
     "/users-permissions/roles/{id}": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get a role",
         "parameters": [
           {
@@ -5519,7 +5660,9 @@
     },
     "/users-permissions/roles/{role}": {
       "put": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Update a role",
         "parameters": [
           {
@@ -5545,7 +5688,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -5565,7 +5710,9 @@
         }
       },
       "delete": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Delete a role",
         "parameters": [
           {
@@ -5588,7 +5735,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -5610,7 +5759,9 @@
     },
     "/users": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get list of users",
         "responses": {
           "200": {
@@ -5629,8 +5780,8 @@
                     "username": "foao@strapi.io",
                     "email": "foao@strapi.io",
                     "provider": "local",
-                    "confirmed": true,
-                    "blocked": true,
+                    "confirmed": false,
+                    "blocked": false,
                     "createdAt": "2022-06-01T18:32:35.211Z",
                     "updatedAt": "2022-06-01T18:32:35.217Z"
                   }
@@ -5651,7 +5802,9 @@
         }
       },
       "post": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Create a user",
         "requestBody": {
           "required": true,
@@ -5659,7 +5812,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["username", "email", "password"],
+                "required": [
+                  "username",
+                  "email",
+                  "password"
+                ],
                 "properties": {
                   "email": {
                     "type": "string"
@@ -5705,8 +5862,8 @@
                   "username": "foo",
                   "email": "foo@strapi.io",
                   "provider": "local",
-                  "confirmed": true,
-                  "blocked": true,
+                  "confirmed": false,
+                  "blocked": false,
                   "createdAt": "2022-05-19T17:35:35.096Z",
                   "updatedAt": "2022-05-19T17:35:35.096Z",
                   "role": {
@@ -5736,7 +5893,9 @@
     },
     "/users/{id}": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get a user",
         "parameters": [
           {
@@ -5762,7 +5921,7 @@
                   "username": "foo",
                   "email": "foo@strapi.io",
                   "provider": "local",
-                  "confirmed": true,
+                  "confirmed": false,
                   "blocked": false,
                   "createdAt": "2022-05-19T17:35:35.096Z",
                   "updatedAt": "2022-05-19T17:35:35.096Z"
@@ -5783,7 +5942,9 @@
         }
       },
       "put": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Update a user",
         "parameters": [
           {
@@ -5802,7 +5963,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["username", "email", "password"],
+                "required": [
+                  "username",
+                  "email",
+                  "password"
+                ],
                 "properties": {
                   "email": {
                     "type": "string"
@@ -5848,7 +6013,7 @@
                   "username": "foo",
                   "email": "foo@strapi.io",
                   "provider": "local",
-                  "confirmed": true,
+                  "confirmed": false,
                   "blocked": false,
                   "createdAt": "2022-05-19T17:35:35.096Z",
                   "updatedAt": "2022-05-19T17:35:35.096Z",
@@ -5877,7 +6042,9 @@
         }
       },
       "delete": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Delete a user",
         "parameters": [
           {
@@ -5907,7 +6074,7 @@
                   "username": "foo",
                   "email": "foo@strapi.io",
                   "provider": "local",
-                  "confirmed": true,
+                  "confirmed": false,
                   "blocked": false,
                   "createdAt": "2022-05-19T17:35:35.096Z",
                   "updatedAt": "2022-05-19T17:35:35.096Z"
@@ -5930,7 +6097,9 @@
     },
     "/users/me": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get authenticated user info",
         "responses": {
           "200": {
@@ -5945,7 +6114,7 @@
                   "username": "foo",
                   "email": "foo@strapi.io",
                   "provider": "local",
-                  "confirmed": true,
+                  "confirmed": false,
                   "blocked": false,
                   "createdAt": "2022-05-19T17:35:35.096Z",
                   "updatedAt": "2022-05-19T17:35:35.096Z"
@@ -5968,7 +6137,9 @@
     },
     "/users/count": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get user count",
         "responses": {
           "200": {
