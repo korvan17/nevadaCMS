@@ -25,6 +25,10 @@
       "configurable": false,
       "required": true
     },
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
     "provider": {
       "type": "string",
       "configurable": false
@@ -110,10 +114,6 @@
     "valueAdd": {
       "type": "boolean",
       "default": false
-    },
-    "fullName": {
-      "type": "string",
-      "required": true
     }
   }
 }
