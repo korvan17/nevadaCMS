@@ -636,7 +636,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       Attribute.Required &
       Attribute.Unique &
       Attribute.SetMinMaxLength<{
-        minLength: 3;
+        minLength: 6;
       }>;
     email: Attribute.Email &
       Attribute.Required &
@@ -658,7 +658,18 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
-    phone: Attribute.String & Attribute.Required;
+    fullName: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 3;
+        maxLength: 32;
+      }>;
+    phone: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 5;
+        maxLength: 15;
+      }>;
     companyName: Attribute.String;
     companyWebsite: Attribute.String;
     amazonSupportSFP: Attribute.Boolean & Attribute.DefaultTo<false>;
@@ -670,7 +681,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
     subscriptionBoxFulfilment: Attribute.Boolean & Attribute.DefaultTo<false>;
     contactCentre: Attribute.Boolean & Attribute.DefaultTo<false>;
     valueAdd: Attribute.Boolean & Attribute.DefaultTo<false>;
-    fullName: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
