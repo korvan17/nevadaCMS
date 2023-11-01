@@ -9,8 +9,8 @@ module.exports = {
         description: "",
         termsOfService: false,
         contact: {
-          name: "TEAM",
-          email: "contact-email@something.io",
+          name: "Pasha Team",
+          email: "pavlo@gmail.com",
           url: "https://nevada-frontend.vercel.app/",
         },
         license: {

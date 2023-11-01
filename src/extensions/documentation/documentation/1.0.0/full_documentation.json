@@ -6,15 +6,15 @@
     "description": "",
     "termsOfService": false,
     "contact": {
-      "name": "TEAM",
-      "email": "contact-email@something.io",
+      "name": "Pasha Team",
+      "email": "pavlo@gmail.com",
       "url": "https://nevada-frontend.vercel.app/"
     },
     "license": {
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-11-01T17:37:15.518Z"
+    "x-generation-date": "2023-11-01T17:47:44.158Z"
   },
   "x-strapi-config": {
     "plugins": [
