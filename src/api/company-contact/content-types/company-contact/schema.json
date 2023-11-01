@@ -4,7 +4,8 @@
   "info": {
     "singularName": "company-contact",
     "pluralName": "company-contacts",
-    "displayName": "companyContact"
+    "displayName": "companyContact",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,7 +27,7 @@
       "type": "string",
       "required": true
     },
-    "address": {
+    "state": {
       "type": "string"
     },
     "facebook": {
@@ -40,6 +41,10 @@
     },
     "whatsapp": {
       "type": "string"
+    },
+    "companyName": {
+      "type": "string",
+      "required": true
     }
   }
 }

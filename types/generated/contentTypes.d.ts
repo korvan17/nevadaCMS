@@ -704,6 +704,7 @@ export interface ApiCompanyContactCompanyContact extends Schema.SingleType {
     singularName: 'company-contact';
     pluralName: 'company-contacts';
     displayName: 'companyContact';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -713,11 +714,12 @@ export interface ApiCompanyContactCompanyContact extends Schema.SingleType {
     phone: Attribute.String & Attribute.Required;
     country: Attribute.String & Attribute.Required;
     city: Attribute.String & Attribute.Required;
-    address: Attribute.String;
+    state: Attribute.String;
     facebook: Attribute.String;
     instagram: Attribute.String;
     telegram: Attribute.String;
     whatsapp: Attribute.String;
+    companyName: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
